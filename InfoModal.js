@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     cont: {
         flex: 1,
         margin: 20,
-        marginTop: 100,
+        marginTop: 20,
     },
     titleContainer: {
         alignItems: 'center',

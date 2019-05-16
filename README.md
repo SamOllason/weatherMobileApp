@@ -41,12 +41,13 @@ Thanks to the following for photos inside of the app
 
 * dust by Photo by Dmitry Sovyak on Unsplash
 
+## Data
+Data is provided by OpenWeatherMap. Please note there is currently limit on of 60 requests per minute (across all users!) so please be patient.
+
 ## Privacy
 None of the 'city' data you interact with inside of the app is stored or recorded.
 
 ## Support
 Please either raise a Github issue or email sam_ollason@hotmail.co.uk with any support questions.
-# weatherDataMobileApp
-# weatherMobileApp
-# weatherMobileApp
-# weatherMobileApp
+
+

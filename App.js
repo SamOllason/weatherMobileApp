@@ -34,7 +34,6 @@ export default class App extends Component {
     this.showModal     = this.showModal.bind(this);
     this.hideModal     = this.hideModal.bind(this);
     this._onTextChange = this._onTextChange.bind(this);
-
   }
 
   /**
