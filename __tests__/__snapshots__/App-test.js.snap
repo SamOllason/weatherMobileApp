@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders correctly, testing using Jest+Enzyme 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F5FCFF",
+      "flex": 1,
+      "marginBottom": 20,
+    }
+  }
+>
+  <BackgroundImage
+    currentWeather="--"
+  />
+  <CurrentWeatherPane
+    city="--"
+    currentWeather="--"
+    temperature="--"
+  />
+  <ForecastList
+    currentWeather="--"
+    forecast={Array []}
+  />
+  <BottomSection
+    closeModal={[Function]}
+    currentWeather="--"
+    getWeather={[Function]}
+    modalVisible={false}
+    onTextChange={[Function]}
+    showModal={[Function]}
+  />
+</View>
+`;

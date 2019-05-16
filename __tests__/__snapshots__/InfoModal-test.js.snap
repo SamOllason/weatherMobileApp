@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfoModal /> renders correctly 1`] = `
+<View>
+  <Component
+    animationType="slide"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    transparent={false}
+    visible={true}
+  >
+    <BackgroundImage
+      currentWeather="clear"
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "margin": 20,
+          "marginTop": 100,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "marginBottom": 30,
+            "marginTop": 30,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+            }
+          }
+        >
+          About
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+            "marginTop": 30,
+          }
+        }
+      >
+        <Text>
+          This is a cross-platform weather app developed with React Native. You are currently using the 
+          iOS
+           version of the app.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+            "marginTop": 30,
+          }
+        }
+      >
+        <Text>
+          Functionality: you can enter the name of a city and see the current weather and conditions in that city. You will also see a 5-day/3-hour forecast for the city's weather conditions.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+            "marginTop": 30,
+          }
+        }
+      >
+        <Text>
+          Data: this data is provided by 
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "blue",
+              }
+            }
+          >
+            OpenWeatherMap
+          </Text>
+          . There is currently limit on of 60 requests per minute (across all users!) so please be patient.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+            "marginTop": 30,
+          }
+        }
+      >
+        <Text>
+          This application was developed by Sam Ollason. All the code for this project is open sourced and available to view 
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "blue",
+              }
+            }
+          >
+            here
+          </Text>
+           for more information
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 30,
+            "marginTop": 30,
+          }
+        }
+      >
+        <Text>
+          For privacy and support information please see 
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "color": "blue",
+              }
+            }
+          >
+            here
+          </Text>
+          .
+        </Text>
+      </View>
+      <Button
+        accessibilityLabel="Close the information screen"
+        title="Close"
+      />
+    </View>
+  </Component>
+</View>
+`;

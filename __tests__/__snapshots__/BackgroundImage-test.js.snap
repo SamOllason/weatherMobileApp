@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackgroundImage /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "bottom": 0,
+      "flex": 1,
+      "height": 1334,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "width": 750,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../images/clearSky.jpg",
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "resizeMode": "stretch",
+      }
+    }
+  />
+</View>
+`;
