@@ -13,6 +13,7 @@ conditions for the selected city.
 This is a cross-platform app created with React Native.
 
 
+
 ## Features:
 * Text input area to type in name of the city
 * Text input area will automatically 'slide up' when you want to use the keyboard
@@ -20,7 +21,6 @@ This is a cross-platform app created with React Native.
 * Area to see 5-day/3-hour forecast in current city, scrollable to see more information. Includes conditions description, conditions icons, and max/min temperature
 * Background dynamically changes based on current weather conditions
 * Ability to refresh data at the click of a button (data on server is updated every 10 minutes)
-
 
 ## Technology features
 This app uses a wide variety of React Native features available on both iOS and Android.
