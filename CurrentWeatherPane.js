@@ -1,22 +1,23 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import * as types from './types';
 
-const CurrentWeatherPane = ({city, currentWeather, temperature}) => {
-    const colour = currentWeather.toLowerCase() === 'snow' ? 'grey': 'whitesmoke';
-    const temp   = temperature === "--" ? temperature : `${temperature} ℃`;
+const CurrentWeatherPane = ({city, currentWeather, temperature, textColour}) => {
+    const temp   = temperature === types.defaultInfo ? temperature : `${temperature} ℃`;
 
+    console.log({textColour});
     return(
         <View style={styles.topContainer}>
             <View styles={styles.city}>
-                <Text style={{fontSize: 20, color: colour}}>{city}</Text>
+                <Text style={{fontSize: 20, color: textColour}}>{city}</Text>
             </View>
 
             <View style={styles.temperature}>
-                <Text style={{fontSize: 50, color: colour}}>{temp}</Text>
+                <Text style={{fontSize: 50, color: textColour}}>{temp}</Text>
             </View>
 
             <View style={styles.weather}>
-                <Text style={{fontSize: 15, color: colour}}>{currentWeather}</Text>
+                <Text style={{fontSize: 15, color: textColour}}>{currentWeather}</Text>
             </View>
         </View>
     );

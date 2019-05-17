@@ -49,7 +49,8 @@ const InfoModal = ({modalVisible, closeModal}) => {
                     </View>
                     <View style={styles.textContainer}>
                         <Text>Data: this data is provided by {openWeatherMapLink}. There is currently limit
-                            on of 60 requests per minute (across all users!) so please be patient.
+                            on of 60 requests per minute (across all users!) so please be patient. Data is refreshed
+                            on the server every 10 minutes.
                         </Text>
                     </View>
                     <View style={styles.textContainer}>
@@ -67,6 +68,7 @@ const InfoModal = ({modalVisible, closeModal}) => {
                         onPress={closeModal}
                         title="Close"
                         accessibilityLabel="Close the information screen"
+                        color="#841584"
                     />
                 </View>
             </Modal>
@@ -86,8 +88,8 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     textContainer: {
-        marginTop: 30,
-        marginBottom: 30,
+        marginTop: 10,
+        marginBottom: 15,
     }
 });
 

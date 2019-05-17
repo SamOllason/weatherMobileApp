@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, StyleSheet, TextInput, View, KeyboardAvoidingView} from "react-native";
 import InfoModal from './InfoModal';
 
-const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVisible, currentWeather}) => {
+const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVisible, currentWeather, textColour}) => {
     return(
 
         <KeyboardAvoidingView behavior="padding" enabled>
@@ -15,7 +15,7 @@ const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVi
                     />
                     <View style={styles.citySelect}>
                         <TextInput
-                            style={{height: 30, color: 'white'}}
+                            style={{height: 30, color: textColour}}
                             placeholder="Enter city here"
                             onChangeText={(input) => onTextChange(input)}
                         />
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         margin: 10,
         padding: 10,
         borderWidth: 1,
-        borderColor: 'whitesmoke'
+        borderColor: 'whitesmoke',
     },
 
     sectionContainer: {

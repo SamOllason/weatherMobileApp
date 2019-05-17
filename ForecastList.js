@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from "react-native";
 
-const ForecastList = ({forecast, currentWeather}) => {
+const ForecastList = ({forecast, textColour}) => {
 
     // Given 15:21:13 return "3pm"
     const getHours = (time) => {
@@ -17,12 +17,22 @@ const ForecastList = ({forecast, currentWeather}) => {
         return `${hhIntClock}${suffix}`;
     };
 
+    // For some reason JavaScriptCore doesn't take "YYYY-MM-DD HH:MM:SS"
+    // format as a constructor param, but it does recognise
+    // "YYYY-MM-DD", and another format mentioned below)
+    const jsCoreDateCreator = (dateString) => {
+        // dateString *HAS* to be in this format "YYYY-MM-DD HH:MM:SS"
+        let dateParam = dateString.split(/[\s-:]/);
+        dateParam[1] = (parseInt(dateParam[1], 10) - 1).toString();
+        return new Date(...dateParam)
+    };
+
     // Convert "YYYY-MM-DD HH:MM:SS" to Day of week and friendlier time e.g. "Mon 3pm"
     const getDay = (fullDate) => {
-        const date   = new Date(fullDate);
+        const date   = jsCoreDateCreator(fullDate);
+        const dayNum = date.getDay();
 
         const time   = getHours(fullDate.split(' ')[1]);
-        const dayNum = date.getDay();
 
         switch(dayNum) {
             case 0 :
@@ -44,15 +54,6 @@ const ForecastList = ({forecast, currentWeather}) => {
         }
     };
 
-    let colour = '';
-
-    if(currentWeather === "--") {
-        colour = 'whitesmoke';
-    } else {
-        console.log({currentWeather});
-        colour = currentWeather.toLowerCase() === 'snow' ? 'grey': 'whitesmoke';
-    }
-
     return(
         <ScrollView>
             <View style={styles.weekContainer}>
@@ -60,13 +61,12 @@ const ForecastList = ({forecast, currentWeather}) => {
                     const day = getDay(point.dt_txt);
                     const uri = `http://openweathermap.org/img/w/${point.weather[0].icon}.png`;
 
-                    console.log({uri});
                     return <View style={styles.weekdayContainer} key={point.dt_txt}>
                         <View style={styles.dateTime}>
-                            <Text style={{fontSize: 15, color: colour}}>{day}</Text>
+                            <Text style={{fontSize: 15, color: textColour}}>{day}</Text>
                         </View>
                         <View style={styles.weather}>
-                            <Text style={{fontSize: 15, color: colour}}>
+                            <Text style={{fontSize: 15, color: textColour}}>
                                 {point.weather[0].main}
                             </Text>
                             <Image
@@ -76,11 +76,11 @@ const ForecastList = ({forecast, currentWeather}) => {
                         </View>
 
                         <View style={styles.tempMax}>
-                            <Text style={{fontSize: 15, fontWeight: 'bold', color: colour}}>{point.main.temp_max}</Text>
+                            <Text style={{fontSize: 15, fontWeight: 'bold', color: textColour}}>{point.main.temp_max}</Text>
                         </View>
 
                         <View style={styles.tempMin}>
-                            <Text style={{fontSize: 15, color: colour}}>{point.main.temp_min}</Text>
+                            <Text style={{fontSize: 15, color: textColour}}>{point.main.temp_min}</Text>
                         </View>
                     </View>
                 })}

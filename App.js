@@ -25,6 +25,7 @@ export default class App extends Component {
       city: types.defaultInfo,
       currentWeather: types.defaultInfo,
       temperature: types.defaultInfo,
+      textColour: types.whitesmoke,
 
       forecast: [],
       modalVisible: false,
@@ -92,11 +93,19 @@ export default class App extends Component {
   };
 
   updateCurrentWeather = (weatherData) => {
+
+    // const currentWeather = weatherData.weather[0].main;
+
+    const currentWeather = 'snow';
+
+    const textColour  = this.getTextColour(currentWeather);
+
     this.setState({
       // Make it clear to user what city data is for.
       city: weatherData.name,
       temperature: weatherData.main.temp,
-      currentWeather: weatherData.weather[0].main,
+      currentWeather: currentWeather,
+      textColour: textColour
     });
   };
 
@@ -147,9 +156,17 @@ export default class App extends Component {
     });
   };
 
+  getTextColour = (currentWeather) => {
+    if(currentWeather === types.defaultInfo) {
+      return types.whitesmoke;
+    } else {
+      return currentWeather.toLowerCase() === 'snow' ? types.grey : types.whitesmoke;
+    }
+  };
+
   render() {
 
-    const { city, temperature, forecast, modalVisible, currentWeather} = this.state;
+    const { city, temperature, forecast, modalVisible, currentWeather, textColour} = this.state;
 
     return (
       <View style={styles.container}>
@@ -162,11 +179,13 @@ export default class App extends Component {
             city={city}
             currentWeather={currentWeather}
             temperature={temperature}
+            textColour={textColour}
         />
 
         <ForecastList
             currentWeather={currentWeather}
             forecast={forecast}
+            textColour={textColour}
         />
 
         <BottomSection
@@ -176,6 +195,7 @@ export default class App extends Component {
             closeModal={this.hideModal}
             modalVisible={modalVisible}
             currentWeather={currentWeather}
+            textColour={textColour}
         />
       </View>
     );
