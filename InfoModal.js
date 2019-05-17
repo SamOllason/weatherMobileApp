@@ -56,7 +56,7 @@ const InfoModal = ({modalVisible, closeModal}) => {
                     <View style={styles.textContainer}>
                         <Text>
                             This application was developed by Sam Ollason. All the code for this project
-                            is open sourced and available to view {projectLink} for more information
+                            is open-source and available to view {projectLink} for more information.
                         </Text>
                     </View>
                     <View style={styles.textContainer}>

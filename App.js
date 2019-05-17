@@ -96,7 +96,7 @@ export default class App extends Component {
 
     // const currentWeather = weatherData.weather[0].main;
 
-    const currentWeather = 'snow';
+    const currentWeather = 'dust';
 
     const textColour  = this.getTextColour(currentWeather);
 
