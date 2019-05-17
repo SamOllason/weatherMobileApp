@@ -1,4 +1,4 @@
-# Weather App
+# WhateverTheWeather
 
 ## Overview
 WhateverTheWeather is dynamic and app that you can use to find out
