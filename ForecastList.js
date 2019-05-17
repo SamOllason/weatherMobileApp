@@ -66,9 +66,9 @@ const ForecastList = ({forecast, textColour}) => {
                             <Text style={{fontSize: 15, color: textColour}}>{day}</Text>
                         </View>
                         <View style={styles.weather}>
-                            <Text style={{fontSize: 15, color: textColour}}>
-                                {point.weather[0].main}
-                            </Text>
+                            {/*<Text style={{fontSize: 15, color: textColour, marginTop: 6}}>*/}
+                            {/*    {point.weather[0].main}*/}
+                            {/*</Text>*/}
                             <Image
                                 source={{uri: uri}}
                                 style={styles.icon}
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
         flex: 2,
     },
     weather: {
-        flex: 2,
+        flex: 1,
         flexDirection: 'row',
     },
     tempMax: {
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     icon: {
         width: 30,
         height: 30,
-        marginLeft: 5
+        marginLeft: 10
     }
 });
 
