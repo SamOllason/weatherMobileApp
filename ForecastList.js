@@ -66,9 +66,11 @@ const ForecastList = ({forecast, textColour}) => {
                             <Text style={{fontSize: 15, color: textColour}}>{day}</Text>
                         </View>
                         <View style={styles.weather}>
+
                             {/*<Text style={{fontSize: 15, color: textColour, marginTop: 6}}>*/}
                             {/*    {point.weather[0].main}*/}
                             {/*</Text>*/}
+
                             <Image
                                 source={{uri: uri}}
                                 style={styles.icon}
