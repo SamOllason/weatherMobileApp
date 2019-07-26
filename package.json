@@ -1,11 +1,12 @@
 {
-  "name": "weatherDataApp",
+  "name": "weather-data-app",
+  "lisence": "Copyright Sam Ollason",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "runi": "react-native run-ios"
+    "ios": "react-native run-ios"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -16,7 +17,7 @@
     "@babel/core": "^7.4.4",
     "@babel/runtime": "^7.4.4",
     "babel-jest": "^24.8.0",
-    "enzyme": "^3.9.0",
+    "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.13.0",
     "fetch-mock": "^7.3.3",
     "jest": "^24.8.0",

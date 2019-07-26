@@ -10,7 +10,7 @@ const InfoModal = ({modalVisible, closeModal}) => {
 
     const projectLink =
         <Text style={{color: 'blue'}}
-              onPress={() => Linking.openURL('https://github.com/SamOllason/mobileWeatherApp')}>
+              onPress={() => Linking.openURL('https://github.com/SamOllason/weatherMobileApp')}>
             here
         </Text>;
 
@@ -34,40 +34,40 @@ const InfoModal = ({modalVisible, closeModal}) => {
                 />
                 <View style={styles.cont}>
                     <View style={styles.titleContainer}>
-                        <Text style={{fontSize: 20}}>About</Text>
+                        <Text style={{fontSize: 20, color: 'white'}}>About</Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text>This is a cross-platform weather app developed with React Native.
+                        <Text style={{color: 'white'}}>This is a cross-platform weather app developed with React Native.
                             You are currently using the {platform} version of the app.
                         </Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text>Functionality: you can enter the name of a city and see the current weather
-                            and conditions in that city. You will also see a 5-day/3-hour forecast for
+                        <Text style={{color: 'white'}}>Functionality: you can enter the name of a city and see the current weather
+                            and conditions. You will also see a 5-day/3-hour forecast for
                             the city's weather conditions.
                         </Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text>Data: this data is provided by {openWeatherMapLink}. There is currently limit
-                            on of 60 requests per minute (across all users!) so please be patient. Data is refreshed
+                        <Text style={{color: 'white'}}>Data: weather data is provided by {openWeatherMapLink}. There is currently a limit
+                            of 60 requests per minute (across all users!) so please be patient. Data is refreshed
                             on the server every 10 minutes.
                         </Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text>
-                            This application was developed by Sam Ollason. All the code for this project
-                            is open-source and available to view {projectLink} for more information.
+                        <Text style={{color: 'white'}}>
+                            This application was developed by Sam Ollason. Please see {projectLink} for more information.
                         </Text>
                     </View>
                     <View style={styles.textContainer}>
-                        <Text>
-                            For privacy and support information please see {projectLink}.
+                        <Text style={{color: 'white'}}>
+                            Privacy: We do not store or log any of your data.
+                            For more privacy and support information please see {projectLink}.
                         </Text>
                     </View>
                     <Button
                         onPress={closeModal}
                         title="Close"
-                        accessibilityLabel="Close the information screen"
+                        accessibilityLabel="Close the information popup"
                         color="#841584"
                     />
                 </View>
