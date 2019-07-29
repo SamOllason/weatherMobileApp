@@ -7,36 +7,30 @@ const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVi
 
         <KeyboardAvoidingView behavior="padding" enabled>
             <View>
-                <View style={styles.sectionContainer}>
-                    <View style={styles.goButtonContainer}>
-                        <Button
-                            onPress={getWeather}
-                            title="Go!"
-                            color="#841584"
-                            accessibilityLabel="Get weather for city below"
-                        />
-                    </View>
-                    <View style={styles.citySelect}>
-                        <TextInput
-                            style={{height: 30}}
-                            placeholder="Enter city here"
-                            onChangeText={(input) => onTextChange(input)}
-                        />
-                    </View>
+                <View style={styles.citySelect}>
+                    <TextInput
+                        style={{height: 20}}
+                        placeholder="Enter city here"
+                        onChangeText={(input) => onTextChange(input)}
+                    />
                 </View>
 
-                <View style={styles.aboutButtonContainer}>
-                    {/*<Button*/}
-                    {/*    color="#841584"*/}
-                    {/*    onPress={getWeather}*/}
-                    {/*    title="Refresh"*/}
-                    {/*    accessibilityLabel="Refresh weather data for chosen city"*/}
-                    {/*/>*/}
+                <View style={styles.goButtonContainer}>
+                    <Button
+                        onPress={getWeather}
+                        title="Go!"
+                        color="#841584"
+                        accessibilityLabel="Get weather for city below"
+                    />
+                </View>
 
+
+                <View style={styles.aboutButtonContainer}>
                     <Button
                         onPress={showModal}
-                        color="#841584"
-                        title="About"
+                        // color="#841584"
+                        // color={"#841584"}
+                        title="Info"
                         accessibilityLabel="See information about this app"
                     />
                 </View>
@@ -61,36 +55,32 @@ const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVi
 
 const styles = StyleSheet.create({
     citySelect: {
-        margin: 10,
-        padding: 10,
+        padding: 15,
         borderWidth: 1,
-        borderColor: 'whitesmoke',
-    },
+        backgroundColor: 'white',
 
-    sectionContainer: {
         borderTopWidth: 0.5,
-        borderColor: 'grey',
+        borderColor: 'white',
         marginLeft: 10,
         marginRight: 10,
-        backgroundColor: 'white',
-        opacity: 0.8,
+        opacity: 0.9,
         // width
     },
 
     goButtonContainer: {
+        marginTop: 10,
         backgroundColor: 'white',
-        opacity: 1,
+        opacity: 0.7,
+        marginLeft: 10,
+        marginRight: 10,
     },
 
     aboutButtonContainer: {
-        // borderTopWidth: 0.5,
-        // borderColor: 'grey',
-        // marginTop: 5,
-        // marginLeft: 10,
-        // marginRight: 10,
-        // backgroundColor: 'white',
-        // opacity: 0.8,
-        // width
+        marginTop: 10,
+        backgroundColor: 'white',
+        opacity: 0.7,
+        marginLeft: 10,
+        marginRight: 10,
     },
 
 });
