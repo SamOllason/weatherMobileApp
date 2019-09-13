@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ForecastList from './ForecastList';
-import {StyleSheet, View, Alert} from 'react-native';
+import { StyleSheet, View, Alert } from 'react-native';
 import CurrentWeatherPane from './CurrentWeatherPane';
 import BackgroundImage from './BackgroundImage';
 import BottomSection from './BottomSection';

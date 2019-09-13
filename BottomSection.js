@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, StyleSheet, TextInput, View, KeyboardAvoidingView} from "react-native";
+import { Button, StyleSheet, Platform, TextInput, View, KeyboardAvoidingView } from "react-native";
 import InfoModal from './InfoModal';
 
 const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVisible, currentWeather, textColour}) => {
@@ -9,7 +9,7 @@ const BottomSection = ({getWeather, onTextChange, showModal, closeModal, modalVi
             <View>
                 <View style={styles.citySelect}>
                     <TextInput
-                        style={{height: 20}}
+                        style={{height: Platform.OS === 'android' ? 40 : 20}}
                         placeholder="Enter city here"
                         onChangeText={(input) => onTextChange(input)}
                     />
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
         padding: 15,
         borderWidth: 1,
         backgroundColor: 'white',
+
 
         borderTopWidth: 0.5,
         borderColor: 'white',

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Modal, Alert, StyleSheet, Platform, Linking, Button} from 'react-native';
+import { View, Text, Modal, Alert, StyleSheet, Platform, Linking, Button } from 'react-native';
 import BackgroundImage from './BackgroundImage';
 
 const InfoModal = ({modalVisible, closeModal}) => {
