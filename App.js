@@ -13,6 +13,7 @@ import * as types from './types';
 //     'Shake or press menu button for dev menu',
 // });
 
+
 const appId = '03d6a8a8a5e2a10e41df0d808802c751';
 
 export default class App extends Component {
@@ -89,13 +90,12 @@ export default class App extends Component {
   };
 
   checkDataStatusOk = (data) => {
-    return data.cod === 200 || data.cod === "200";
+    return data.cod === "200" || data.cod === 200;
   };
 
   updateCurrentWeather = (weatherData) => {
 
     const currentWeather = weatherData.weather[0].main;
-    // const currentWeather = 'Snow';
 
     const textColour  = this.getTextColour(currentWeather);
 
