@@ -13,7 +13,7 @@ conditions for the selected city.
 This is a cross-platform app created with React Native.
 
 
-Get it now on the [Play Store](https://play.google.com/store/apps/details?id=com.weathermobileapp) and [App Store](https://apps.apple.com/ng/app/weather/id1464688872?ign-mpt=uo%3D2)
+Get it now on the [Play Store](https://play.google.com/store/apps/details?id=com.weathermobileapp) and [App Store](https://apps.apple.com/ng/app/weather/id1464688872?ign-mpt=uo%3D2).
 
 ## Features:
 * Text input area to type in name of the city
