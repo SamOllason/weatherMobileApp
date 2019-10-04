@@ -1,6 +1,9 @@
 # Weather++
 
 ## Overview
+
+![Logo](./images/sunFace120.png)
+
 Weather++ is an easy to use and beautifully-designed tool that allows you to see
 the current weather and a 5 day forecast in any city in the world! (Note: currently only for Earth).
 
@@ -12,8 +15,10 @@ conditions for the selected city.
 
 This is a cross-platform app created with React Native.
 
+Get it now on the [Play Store](https://play.google.com/store/apps/details?id=com.weathermobileapp) and the [App Store](https://apps.apple.com/ng/app/weather/id1464688872?ign-mpt=uo%3D2).
 
-Get it now on the [Play Store](https://play.google.com/store/apps/details?id=com.weathermobileapp) and [App Store](https://apps.apple.com/ng/app/weather/id1464688872?ign-mpt=uo%3D2).
+
+![Example screens of the app in use](./images/screenshots/Android/graphic.png)
 
 ## Features:
 * Text input area to type in name of the city
