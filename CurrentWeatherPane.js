@@ -1,9 +1,9 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import * as types from './types';
 
 const CurrentWeatherPane = ({city, currentWeather, temperature, textColour}) => {
-    const temp   = temperature === types.defaultInfo ? temperature : `${temperature} ℃`;
+    const temp = temperature === types.defaultInfo ? temperature : `${temperature} ℃`;
 
     return(
         <View style={styles.topContainer}>
