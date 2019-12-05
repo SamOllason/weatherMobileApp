@@ -17,7 +17,7 @@ exports[`<InfoModal /> renders correctly 1`] = `
         Object {
           "flex": 1,
           "margin": 20,
-          "marginTop": 100,
+          "marginTop": 20,
         }
       }
     >
@@ -33,6 +33,7 @@ exports[`<InfoModal /> renders correctly 1`] = `
         <Text
           style={
             Object {
+              "color": "white",
               "fontSize": 20,
             }
           }
@@ -43,12 +44,18 @@ exports[`<InfoModal /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 30,
-            "marginTop": 30,
+            "marginBottom": 15,
+            "marginTop": 10,
           }
         }
       >
-        <Text>
+        <Text
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
           This is a cross-platform weather app developed with React Native. You are currently using the 
           iOS
            version of the app.
@@ -57,25 +64,37 @@ exports[`<InfoModal /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 30,
-            "marginTop": 30,
+            "marginBottom": 15,
+            "marginTop": 10,
           }
         }
       >
-        <Text>
-          Functionality: you can enter the name of a city and see the current weather and conditions in that city. You will also see a 5-day/3-hour forecast for the city's weather conditions.
+        <Text
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Functionality: you can enter the name of a city and see the current weather and conditions. You will also see a 5-day/3-hour forecast for the city's weather conditions.
         </Text>
       </View>
       <View
         style={
           Object {
-            "marginBottom": 30,
-            "marginTop": 30,
+            "marginBottom": 15,
+            "marginTop": 10,
           }
         }
       >
-        <Text>
-          Data: this data is provided by 
+        <Text
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Data: weather data is provided by 
           <Text
             onPress={[Function]}
             style={
@@ -86,19 +105,25 @@ exports[`<InfoModal /> renders correctly 1`] = `
           >
             OpenWeatherMap
           </Text>
-          . There is currently limit on of 60 requests per minute (across all users!) so please be patient.
+          . There is currently a limit of 60 requests per minute (across all users!) so please be patient. Data is refreshed on the server every 10 minutes.
         </Text>
       </View>
       <View
         style={
           Object {
-            "marginBottom": 30,
-            "marginTop": 30,
+            "marginBottom": 15,
+            "marginTop": 10,
           }
         }
       >
-        <Text>
-          This application was developed by Sam Ollason. All the code for this project is open sourced and available to view 
+        <Text
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          This application was developed by Sam Ollason. Please see 
           <Text
             onPress={[Function]}
             style={
@@ -109,19 +134,25 @@ exports[`<InfoModal /> renders correctly 1`] = `
           >
             here
           </Text>
-           for more information
+           for more information.
         </Text>
       </View>
       <View
         style={
           Object {
-            "marginBottom": 30,
-            "marginTop": 30,
+            "marginBottom": 15,
+            "marginTop": 10,
           }
         }
       >
-        <Text>
-          For privacy and support information please see 
+        <Text
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Privacy: We do not store or log any of your data. For more privacy and support information please see 
           <Text
             onPress={[Function]}
             style={
@@ -136,7 +167,8 @@ exports[`<InfoModal /> renders correctly 1`] = `
         </Text>
       </View>
       <Button
-        accessibilityLabel="Close the information screen"
+        accessibilityLabel="Close the information popup"
+        color="#841584"
         title="Close"
       />
     </View>
