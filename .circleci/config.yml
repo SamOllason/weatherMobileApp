@@ -3,6 +3,6 @@ jobs:
   build:
     docker:
       - image: citcleci/ruby:2.4.1
-    steps
+    steps:
       - checkout
       - run: echo "first hello"
