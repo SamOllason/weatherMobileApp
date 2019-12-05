@@ -6,12 +6,12 @@ jobs:
     steps:
       - checkout
       - run: npm install
-  build:
+  start:
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: npm run build
+      - run: npm run start
   test:
     docker:
       - image: circleci/node:latest
@@ -23,5 +23,5 @@ workflows:
   whole_suite:
     jobs:
       - install
-      - build
+      - start
       - test
