@@ -1,5 +1,11 @@
 version: 2
 jobs:
+  echo:
+    docker:
+      - image: circleci/node:latest
+      steps:
+        - checkout
+        - run: echo "starting CI suite"
   install:
     docker:
       - image: circleci/node:latest
@@ -22,6 +28,14 @@ workflows:
   version: 2
   whole_suite:
     jobs:
+      # echo and install will be run in parallel
+      - echo
       - install
-      - start
-      - test
+
+      # install will have to complete before start and test can be started
+      - start:
+        requires:
+          - install
+      - test:
+        requires:
+          - install
