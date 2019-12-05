@@ -33,7 +33,7 @@ exports[`<ForecastList /> renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "whitesmoke",
+              "color": undefined,
               "fontSize": 15,
             }
           }
@@ -44,21 +44,11 @@ exports[`<ForecastList /> renders correctly 1`] = `
       <View
         style={
           Object {
-            "flex": 2,
+            "flex": 1,
             "flexDirection": "row",
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "whitesmoke",
-              "fontSize": 15,
-            }
-          }
-        >
-          Rain
-        </Text>
         <Image
           source={
             Object {
@@ -68,7 +58,7 @@ exports[`<ForecastList /> renders correctly 1`] = `
           style={
             Object {
               "height": 30,
-              "marginLeft": 5,
+              "marginLeft": 10,
               "width": 30,
             }
           }
@@ -84,7 +74,7 @@ exports[`<ForecastList /> renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "whitesmoke",
+              "color": undefined,
               "fontSize": 15,
               "fontWeight": "bold",
             }
@@ -103,7 +93,7 @@ exports[`<ForecastList /> renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "whitesmoke",
+              "color": undefined,
               "fontSize": 15,
             }
           }

@@ -17,10 +17,12 @@ exports[`<App /> renders correctly, testing using Jest+Enzyme 1`] = `
     city="--"
     currentWeather="--"
     temperature="--"
+    textColour="whitesmoke"
   />
   <ForecastList
     currentWeather="--"
     forecast={Array []}
+    textColour="whitesmoke"
   />
   <BottomSection
     closeModal={[Function]}
@@ -29,6 +31,7 @@ exports[`<App /> renders correctly, testing using Jest+Enzyme 1`] = `
     modalVisible={false}
     onTextChange={[Function]}
     showModal={[Function]}
+    textColour="whitesmoke"
   />
 </View>
 `;
