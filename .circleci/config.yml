@@ -12,18 +12,12 @@ jobs:
     steps:
       - checkout
       - run: npm install
-  start:
-    docker:
-      - image: circleci/node:latest
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm run start
   test:
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
+      - run: npm install
       - run: npm run test
 workflows:
   version: 2
@@ -32,13 +26,8 @@ workflows:
       # echo and install will be run in parallel
       - echo
       - install
-      - start
 
-      # install will have to complete before start and test can be started.
-      # if dependencies won't install then no point in checking if starts/tests pass
-      - start:
-          requires:
-            - install
+      # make this workflow a dependency of another
       - test:
           requires:
             - install
