@@ -4,27 +4,24 @@ jobs:
     docker:
       - image: circleci/node:latest
     steps:
-      # checkout branch
       - checkout
       - run: npm install
   build:
     docker:
       - image: circleci/node:latest
     steps:
-      # checkout branch
       - checkout
       - run: npm run build
   test:
     docker:
       - image: circleci/node:latest
     steps:
-      # checkout branch
       - checkout
       - run: npm run test
-  workflows:
-    version: 2
-    whole_suite:
-      jobs:
-        - install
-        - build
-        - test
+workflows:
+  version: 2
+  whole_suite:
+    jobs:
+      - install
+      - build
+      - test
