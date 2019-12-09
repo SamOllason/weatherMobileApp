@@ -35,7 +35,7 @@ This app uses a wide variety of React Native features available on both iOS and 
 * Networking - data fetching from multiple endpoints using modern async/await syntax
 * Responsive styling with Flexbox
 * Working with images and external links
-* Testing with Jest + Enzyme
+* Testing with Jest + Enzyme, CircleCI.
 * Accessibility labels added to buttons etc.
 
 ## Data
